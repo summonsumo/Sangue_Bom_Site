@@ -14,7 +14,7 @@
     <header>
         <nav id = "navbar">
             <ul>
-                <li><a href = "#Home">Sangue bom</a>
+                <li><a href = "#Home">Sangue Bom</a>
                 <li><a href = "#Projeto">Sobre o projeto</a>
                 <li><a href = "#Nos">Sobre nós</a>
                 <li><a href = "#Jogo">Jogo</a>
@@ -72,7 +72,13 @@
     <p id="paragraph">Clique no GIF para baixar o jogo. Divirta-se!</p>
     <a href="assets/Sangue Bom.zip" download="Sangue_Bom.zip"><img src="assets/Trailer_Sangue_Bom.gif"
         style="position: relative; width: 50%; height: 50%; margin-left: 25%; border-radius: 20px;"></a>
-    
+
+        <p style=" margin-top: 20%;">O que é o jogo?</p>
+
+        <video id="video" width=20% height=20% style="margin: auto 40%; border-radius: 20px;" controls>
+            <source src="assets/Video_Daniel.mp4" type="video/mp4">
+            Seu navegador não é compatível.
+        </video>
 
     </div>
     <footer id = "footer">
@@ -87,7 +93,13 @@
       </audio>
     <script>
         var audio = document.getElementById("audio");
-        audio.volume = 0.3;
+        audio.volume = 0.2;
+
+        var v = document.getElementById("video");
+        v.addEventListener('play',()=>{audio.pause();
+        v.setAttribute('height','40%');
+        v.setAttribute('width','40%');
+        v.style.marginLeft="30%";});
     </script>
 </div>
 </body>
